@@ -52,7 +52,7 @@ xyplot(interval_steps~interval, df2, type = "l",xlab="Time Intervals (5-minute)"
 MaxStepsInterval <- df2$interval[which.max(df2$interval_steps)]
 ```
 
-The 835th (time interval), on average across all the days in the dataset, contains the maximum number of steps.
+The 835 (5 minute interval), on average across all the days in the dataset, contains the maximum number of steps.
 
 ## Imputing missing values
 
@@ -63,6 +63,8 @@ Missing values are imputed by the combination of
 
 * Average daily activity pattern 
 
+* (Somehow i have choosen a sophisticated strategy for imputing missing data
+)
 
 ```r
 total_number_NA <- sum(is.na(data$steps))
