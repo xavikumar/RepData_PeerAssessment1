@@ -27,14 +27,14 @@ library(plyr)
 ```r
 df1 <- ddply(data, c("date"), summarise, daily_steps = sum(steps))
 df1 <- df1[complete.cases(df1),]
-mean_daily_steps <- round(mean(df1$daily_steps))
+mean_daily_steps <- mean(df1$daily_steps)
 median_daily_steps <- median(df1$daily_steps)
 hist(df1$daily_steps,breaks = 20, col="black",xlab="Total steps by day",ylab="Frequency (Days)",main="Histogram : Number of daily steps")
 ```
 
 ![](./PA1_template_files/figure-html/unnamed-chunk-1-1.png) 
 
-The mean of the total number of steps taken per day is 1.0766\times 10^{4}.
+The mean of the total number of steps taken per day is 1.0766189\times 10^{4}.
 
 The median of the total number of steps taken per day is 10765.
 

@@ -23,7 +23,7 @@ data$date <- as.Date(data$date,"%Y-%m-%d")
 library(plyr)
 df1 <- ddply(data, c("date"), summarise, daily_steps = sum(steps))
 df1 <- df1[complete.cases(df1),]
-mean_daily_steps <- round(mean(df1$daily_steps))
+mean_daily_steps <- mean(df1$daily_steps)
 median_daily_steps <- median(df1$daily_steps)
 hist(df1$daily_steps,breaks = 20, col="black",xlab="Total steps by day",ylab="Frequency (Days)",main="Histogram : Number of daily steps")
 ```
